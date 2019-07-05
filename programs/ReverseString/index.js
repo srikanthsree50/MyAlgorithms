@@ -1,5 +1,5 @@
 
-function reverse(str) 
+function reverse(str)
 {
     return str.split('').reduce((rev,char) => char + rev ,'');
 }
