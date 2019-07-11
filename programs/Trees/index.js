@@ -27,11 +27,26 @@ const arr = [this.root];
 while(arr.length){
     const node = arr.shift();
 
-    arr.push(...node.children)
+arr.push(...node.children)
+//arr.push(node.children)
+//for(let child of children){
+  //  arr.push(child)
+//} 
     fn(node)
 }
 }
 
+traverseDF(fn){
+    const arr = [this.root];
+    while(arr.length){
+        const node = arr.shift();
+    
+    arr.unshift(...node.children)
+
+        fn(node)
+
+}
+}
 }
 
 const node = new Node();
